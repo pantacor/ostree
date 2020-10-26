@@ -7,7 +7,7 @@ LOCAL_DESCRIPTION := ostree
 
 LOCAL_LIBRARIES := \
 	e2fsprogs \
-	liblzma \
+	xz \
 	zlib \
 	gpgme \
 	glib \
