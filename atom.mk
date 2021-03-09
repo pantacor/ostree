@@ -9,7 +9,6 @@ LOCAL_LIBRARIES := \
 	e2fsprogs \
 	xz \
 	zlib \
-	gpgme \
 	glib \
 	$(NULL)
 
@@ -18,7 +17,8 @@ LOCAL_EXPORT_LDLIBS = -l:libostree.a
 LOCAL_AUTOTOOLS_VERSION := 2.0.4
 LOCAL_AUTOTOOLS_CONFIGURE_ARGS := \
 	YACC="bison -y" \
-	--with-gpgme-prefix=$(TARGET_OUT_STAGING)/usr \
+        ac_cv_prog_YACC="bison -y" \
+	--without-gpgme \
 	--enable-rofiles-fuse=no \
 	$(NULL)
 LOCAL_AUTOTOOLS_CONFIGURE_ENV := 
